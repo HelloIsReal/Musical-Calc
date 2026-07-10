@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dti7xnnmoneo6"]
+
+[ext_resource type="Texture2D" uid="uid://54gutxc4bsj3" path="res://icon.svg" id="1_o5qli"]
+
+[node name="Node2D" type="Node2D" unique_id=819954149]
+
+[node name="detector" type="Sprite2D" parent="." unique_id=814163096]
+texture = ExtResource("1_o5qli")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=980164446]
+position = Vector2(0, 244)
