@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://du5s1awuros0y"]
+
+[node name="SongSelector" type="Node2D" unique_id=1878265030]
+
+[node name="Button" type="Button" parent="." unique_id=1282955527]
+offset_left = -243.0
+offset_top = -439.0
+offset_right = 224.0
+offset_bottom = -321.0
+theme_override_font_sizes/font_size = 40
+text = "Tutorial
+(Highly Recommended!)"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1816769475]

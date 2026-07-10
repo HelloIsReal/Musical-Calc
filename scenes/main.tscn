@@ -1,11 +1,27 @@
 [gd_scene format=3 uid="uid://dti7xnnmoneo6"]
 
-[ext_resource type="Texture2D" uid="uid://54gutxc4bsj3" path="res://icon.svg" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://ckkfjkhtq473a" path="res://scenes/question.tscn" id="2_0wfyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
+size = Vector2(125.29578, 67.8569)
 
 [node name="Node2D" type="Node2D" unique_id=819954149]
 
-[node name="detector" type="Sprite2D" parent="." unique_id=814163096]
-texture = ExtResource("1_o5qli")
+[node name="detector" type="Area2D" parent="." unique_id=598278568 groups=["detector"]]
+position = Vector2(0, 220.00002)
+scale = Vector2(2.21875, 0.28000093)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector" unique_id=1736043694 groups=["detector"]]
+position = Vector2(0, -19.643005)
+shape = SubResource("RectangleShape2D_o5qli")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=980164446]
-position = Vector2(0, 244)
+
+[node name="answer" type="LineEdit" parent="." unique_id=671266058]
+offset_left = -36.0
+offset_top = 262.0
+offset_right = 32.5
+offset_bottom = 293.0
+
+[node name="question" parent="." unique_id=927947455 instance=ExtResource("2_0wfyh")]
+position = Vector2(-66, -537)

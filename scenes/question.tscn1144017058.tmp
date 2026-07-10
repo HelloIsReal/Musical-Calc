@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ckkfjkhtq473a"]
+
+[ext_resource type="Script" uid="uid://dx3ewoa1ihw0j" path="res://scenes/question.gd" id="1_lk18j"]
+
+[node name="question" type="Node2D" unique_id=927947455]
+script = ExtResource("1_lk18j")
+
+[node name="Label" type="Label" parent="." unique_id=2021769449]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "10+10=?"

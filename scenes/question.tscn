@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ckkfjkhtq473a"]
+
+[ext_resource type="Script" uid="uid://dx3ewoa1ihw0j" path="res://scripts/question.gd" id="1_lk18j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lk18j"]
+size = Vector2(206, 8)
+
+[node name="question" type="Area2D" unique_id=503841241]
+script = ExtResource("1_lk18j")
+
+[node name="Label" type="Label" parent="." unique_id=2021769449]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 48
+text = "10+10=?"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1269842570]
+position = Vector2(103, 39)
+shape = SubResource("RectangleShape2D_lk18j")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
