@@ -25,6 +25,7 @@ func _on_area_entered(area):
 		if int(get_tree().current_scene.get_node("answer").text) == additionEasyAnswers[chosenQuestion]:
 			print("Correct answer!")
 			get_tree().current_scene.get_node("answer").clear()
+			Global.correctAnswer.emit()
 			queue_free()
 		else:
 			get_tree().current_scene.get_node("answer").clear()

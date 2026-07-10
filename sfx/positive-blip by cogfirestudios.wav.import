@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b48p4pv4haedq"
+path="res://.godot/imported/positive-blip by cogfirestudios.wav-2bc74cd3b6de78d1de8ed0a60f405abe.sample"
+
+[deps]
+
+source_file="res://sfx/positive-blip by cogfirestudios.wav"
+dest_files=["res://.godot/imported/positive-blip by cogfirestudios.wav-2bc74cd3b6de78d1de8ed0a60f405abe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
