@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Musical Calcs"
-run/main_scene="uid://dti7xnnmoneo6"
+run/main_scene="uid://du5s1awuros0y"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

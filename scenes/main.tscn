@@ -1,27 +1,52 @@
 [gd_scene format=3 uid="uid://dti7xnnmoneo6"]
 
-[ext_resource type="PackedScene" uid="uid://ckkfjkhtq473a" path="res://scenes/question.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://dhu03d3d4kjvm" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="AudioStream" uid="uid://b6yblav4i21xt" path="res://songs/90bpm simple loop by josefpres.wav" id="2_0wfyh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
-size = Vector2(125.29578, 67.8569)
+size = Vector2(877.07043, 67.8569)
 
 [node name="Node2D" type="Node2D" unique_id=819954149]
+script = ExtResource("1_0wfyh")
 
 [node name="detector" type="Area2D" parent="." unique_id=598278568 groups=["detector"]]
-position = Vector2(0, 220.00002)
+position = Vector2(0, 316)
 scale = Vector2(2.21875, 0.28000093)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector" unique_id=1736043694 groups=["detector"]]
-position = Vector2(0, -19.643005)
+position = Vector2(-6.0175507e-06, -19.643066)
 shape = SubResource("RectangleShape2D_o5qli")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=980164446]
 
 [node name="answer" type="LineEdit" parent="." unique_id=671266058]
-offset_left = -36.0
-offset_top = 262.0
-offset_right = 32.5
-offset_bottom = 293.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 377.0
+offset_right = 126.0
+offset_bottom = 473.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
 
-[node name="question" parent="." unique_id=927947455 instance=ExtResource("2_0wfyh")]
-position = Vector2(-66, -537)
+[node name="songs" type="Node2D" parent="." unique_id=487145537]
+
+[node name="tutorial" type="AudioStreamPlayer2D" parent="songs" unique_id=932159521]
+stream = ExtResource("2_0wfyh")
+
+[node name="gameplayText" type="Label" parent="." unique_id=325819411]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -389.5
+offset_top = -176.0
+offset_right = 389.5
+offset_bottom = -88.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Welcome to Musical Calc!"
+horizontal_alignment = 1

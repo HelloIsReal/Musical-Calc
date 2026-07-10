@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://du5s1awuros0y"]
 
-[node name="SongSelector" type="Node2D" unique_id=1878265030]
+[ext_resource type="Script" uid="uid://ddei7rojvywwh" path="res://scripts/song_selector.gd" id="1_m6nl3"]
 
-[node name="Button" type="Button" parent="." unique_id=1282955527]
+[node name="SongSelector" type="Node2D" unique_id=1878265030]
+script = ExtResource("1_m6nl3")
+
+[node name="tutorialButton" type="Button" parent="." unique_id=1282955527]
 offset_left = -243.0
 offset_top = -439.0
 offset_right = 224.0
@@ -12,3 +15,5 @@ text = "Tutorial
 (Highly Recommended!)"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1816769475]
+
+[connection signal="pressed" from="tutorialButton" to="." method="_on_tutorial_button_pressed"]
