@@ -6,13 +6,13 @@ func _ready():
 	if(Global.chosenSong=="tutorial"):
 		$songs/tutorial.play()
 		$gameplayText.text = "Welcome to Musical Calc!"
-		await get_tree().create_timer(3).timeout
+		await get_tree().create_timer(2.9).timeout
 		$gameplayText.text = "Welcome to Musical Calc!\nThe rhythm game about calculating numbers!"
 		await get_tree().create_timer(5).timeout
 		$gameplayText.text = "Here, let me show you the basics!"
 		await get_tree().create_timer(3).timeout
 		$gameplayText.text = "Here, let me show you the basics!"
-		spawnQuestion(60,2)
+		spawnQuestion(70,2)
 		await get_tree().create_timer(3).timeout 
 		$gameplayText.text = "See this question coming down?"
 		await get_tree().create_timer(4).timeout
@@ -23,7 +23,7 @@ func _ready():
 		$gameplayText.text = "See? It's that easy!\n(Unless you somehow missed it...)"
 		await get_tree().create_timer(4).timeout
 		$gameplayText.text = "Here's one more question, but faster!"
-		spawnQuestion(200,1)
+		spawnQuestion(250,1)
 		await get_tree().create_timer(5).timeout
 		$gameplayText.text = "That's it for this tutorial!"
 		await get_tree().create_timer(3).timeout

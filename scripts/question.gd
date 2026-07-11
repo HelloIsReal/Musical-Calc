@@ -8,7 +8,7 @@ var additionEasyAnswers = [2,4,3,1,5,4]
 var canMove=false
 
 func _ready():
-	position = Vector2(rng.randi_range(-900,700),-530)
+	position = Vector2(rng.randi_range(-900,700),-600)
 	chosenQuestion = rng.randi_range(0,additionEasy.size()-1)
 	$Label.text = additionEasy[chosenQuestion]
 	

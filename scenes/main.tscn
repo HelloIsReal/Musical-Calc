@@ -49,7 +49,7 @@ offset_right = 389.5
 offset_bottom = -88.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
-text = "Welcome to Musical Calc!"
+text = "text"
 horizontal_alignment = 1
 
 [node name="correctAnswerSfx" type="AudioStreamPlayer2D" parent="." unique_id=2017909895]
