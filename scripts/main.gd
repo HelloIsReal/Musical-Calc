@@ -66,7 +66,8 @@ func _ready():
 		spawnQuestion(400,0)
 		spawnQuestion(400,0.3)
 		spawnQuestion(400,0.6)
-
+		await get_tree().create_timer(4).timeout
+		get_tree().change_scene_to_file("res://scenes/songSelector.tscn")
 
 func _physics_process(delta):
 	$scoreText.text = "Score: %d" % Global.score 
