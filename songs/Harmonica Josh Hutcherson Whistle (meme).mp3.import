@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3d4ws2hygfwp"
+path="res://.godot/imported/Harmonica Josh Hutcherson Whistle (meme).mp3-c27ba777e8253b89af95da3d59028fdb.mp3str"
+
+[deps]
+
+source_file="res://songs/Harmonica Josh Hutcherson Whistle (meme).mp3"
+dest_files=["res://.godot/imported/Harmonica Josh Hutcherson Whistle (meme).mp3-c27ba777e8253b89af95da3d59028fdb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

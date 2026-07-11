@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhu03d3d4kjvm" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="AudioStream" uid="uid://b6yblav4i21xt" path="res://songs/90bpm simple loop by josefpres.wav" id="2_0wfyh"]
+[ext_resource type="AudioStream" uid="uid://c3d4ws2hygfwp" path="res://songs/Harmonica Josh Hutcherson Whistle (meme).mp3" id="3_jyhfs"]
 [ext_resource type="AudioStream" uid="uid://b48p4pv4haedq" path="res://sfx/positive-blip by cogfirestudios.wav" id="3_sugp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
@@ -38,6 +39,9 @@ theme_override_font_sizes/font_size = 64
 
 [node name="tutorial" type="AudioStreamPlayer2D" parent="songs" unique_id=932159521]
 stream = ExtResource("2_0wfyh")
+
+[node name="hutchersonWhistle" type="AudioStreamPlayer2D" parent="songs" unique_id=2108625224]
+stream = ExtResource("3_jyhfs")
 
 [node name="gameplayText" type="Label" parent="." unique_id=325819411]
 anchors_preset = 5

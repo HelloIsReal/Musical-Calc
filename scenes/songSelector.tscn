@@ -7,13 +7,43 @@ script = ExtResource("1_m6nl3")
 
 [node name="tutorialButton" type="Button" parent="." unique_id=1282955527]
 offset_left = -243.0
-offset_top = -439.0
+offset_top = -149.0
 offset_right = 224.0
-offset_bottom = -321.0
+offset_bottom = -31.0
 theme_override_font_sizes/font_size = 40
 text = "Tutorial
 (Highly Recommended!)"
 
+[node name="hutchersonWhistleButtonEasy" type="Button" parent="." unique_id=705789829]
+offset_left = -476.0
+offset_top = 16.0
+offset_right = -9.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 40
+text = "Hutcherson Whistle
+(Easy)"
+
+[node name="hutchersonWhistleButtonNormal" type="Button" parent="." unique_id=205481969]
+offset_left = -476.0
+offset_top = 16.0
+offset_right = -9.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 40
+text = "Hutcherson Whistle
+(Normal)"
+
+[node name="hutchersonWhistleButtonHard" type="Button" parent="." unique_id=1825999242]
+offset_left = 10.0
+offset_top = 16.0
+offset_right = 477.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 40
+text = "Hutcherson Whistle
+(HARD)"
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1816769475]
 
 [connection signal="pressed" from="tutorialButton" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="hutchersonWhistleButtonEasy" to="." method="_on_hutcherson_whistle_button_easy_pressed"]
+[connection signal="pressed" from="hutchersonWhistleButtonNormal" to="." method="_on_hutcherson_whistle_button_normal_pressed"]
+[connection signal="pressed" from="hutchersonWhistleButtonHard" to="." method="_on_hutcherson_whistle_button_hard_pressed"]

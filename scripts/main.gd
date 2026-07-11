@@ -31,6 +31,28 @@ func _ready():
 		await get_tree().create_timer(3).timeout
 		Global.chosenSong="none"
 		get_tree().change_scene_to_file("res://scenes/songSelector.tscn")
+	if(Global.chosenSong=="hutchWhistleEasy"):
+		$songs/hutchersonWhistle.play(5)
+		spawnQuestion(260,0)
+		await get_tree().create_timer(4.5).timeout
+		spawnQuestion(260,0)
+		await get_tree().create_timer(3).timeout
+		spawnQuestion(260,0)
+		await get_tree().create_timer(4).timeout
+		spawnQuestion(400,0)
+		await get_tree().create_timer(2).timeout
+		get_tree().change_scene_to_file("res://scenes/songSelector.tscn")
+		#await get_tree().create_timer(3).timeout
+	if(Global.chosenSong=="hutchWhistleNormal"):
+		$songs/hutchersonWhistle.play(5)
+		spawnQuestion(260,0)
+		spawnQuestion(260,0.75)
+		spawnQuestion(260,1.5)
+		
+		spawnQuestion(260,3.5)
+		spawnQuestion(260,4.25)
+		spawnQuestion(260,5)
+		
 
 
 func spawnQuestion(speed,waitTime):
