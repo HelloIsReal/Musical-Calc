@@ -1,10 +1,12 @@
 extends Node2D
 var question = preload("res://scenes/question.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.correctAnswer.connect(correctAnswer)
 	if(Global.chosenSong=="tutorial"):
 		$songs/tutorial.play()
+		$gameplayText.visible=true
 		$gameplayText.text = "Welcome to Musical Calc!"
 		await get_tree().create_timer(2.9).timeout
 		$gameplayText.text = "Welcome to Musical Calc!\nThe rhythm game about calculating numbers!"
@@ -40,20 +42,35 @@ func _ready():
 		spawnQuestion(260,0)
 		await get_tree().create_timer(4).timeout
 		spawnQuestion(400,0)
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(4).timeout
 		get_tree().change_scene_to_file("res://scenes/songSelector.tscn")
 		#await get_tree().create_timer(3).timeout
 	if(Global.chosenSong=="hutchWhistleNormal"):
 		$songs/hutchersonWhistle.play(5)
-		spawnQuestion(260,0)
-		spawnQuestion(260,0.75)
-		spawnQuestion(260,1.5)
-		
-		spawnQuestion(260,3.5)
-		spawnQuestion(260,4.25)
-		spawnQuestion(260,5)
-		
+		await get_tree().create_timer(0.5).timeout
+		spawnQuestion(300,0)
+		spawnQuestion(300,0.75)
+		spawnQuestion(300,1.5)
+		await get_tree().create_timer(2.8).timeout
+		spawnQuestion(300,0)
+		spawnQuestion(300,0.75)
+		spawnQuestion(300,1.5)
+		await get_tree().create_timer(3).timeout
+		spawnQuestion(300,0)
+		spawnQuestion(300,0.75)
+		spawnQuestion(300,1.5)
+		await get_tree().create_timer(3).timeout
+		spawnQuestion(300,0)
+		spawnQuestion(300,0.7)
+		await get_tree().create_timer(1.75).timeout
+		spawnQuestion(400,0)
+		spawnQuestion(400,0.3)
+		spawnQuestion(400,0.6)
 
+
+func _physics_process(delta):
+	$scoreText.text = "Score: %d" % Global.score 
+	$comboText.text = "Combo: %d" % Global.combo
 
 func spawnQuestion(speed,waitTime):
 	print("spawn!")
@@ -65,3 +82,5 @@ func spawnQuestion(speed,waitTime):
 
 func correctAnswer():
 	$correctAnswerSfx.play()
+	Global.score+=300
+	Global.combo+=1

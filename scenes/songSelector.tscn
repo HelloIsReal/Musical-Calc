@@ -6,38 +6,39 @@
 script = ExtResource("1_m6nl3")
 
 [node name="tutorialButton" type="Button" parent="." unique_id=1282955527]
-offset_left = -243.0
-offset_top = -149.0
-offset_right = 224.0
-offset_bottom = -31.0
+offset_left = -220.0
+offset_top = -188.0
+offset_right = 247.0
+offset_bottom = -70.0
 theme_override_font_sizes/font_size = 40
 text = "Tutorial
 (Highly Recommended!)"
 
 [node name="hutchersonWhistleButtonEasy" type="Button" parent="." unique_id=705789829]
-offset_left = -476.0
+offset_left = -665.0
 offset_top = 16.0
-offset_right = -9.0
+offset_right = -277.0
 offset_bottom = 134.0
 theme_override_font_sizes/font_size = 40
 text = "Hutcherson Whistle
 (Easy)"
 
 [node name="hutchersonWhistleButtonNormal" type="Button" parent="." unique_id=205481969]
-offset_left = -476.0
+offset_left = -182.0
 offset_top = 16.0
-offset_right = -9.0
+offset_right = 206.0
 offset_bottom = 134.0
 theme_override_font_sizes/font_size = 40
 text = "Hutcherson Whistle
 (Normal)"
 
 [node name="hutchersonWhistleButtonHard" type="Button" parent="." unique_id=1825999242]
-offset_left = 10.0
+offset_left = 300.0
 offset_top = 16.0
-offset_right = 477.0
+offset_right = 688.0
 offset_bottom = 134.0
 theme_override_font_sizes/font_size = 40
+disabled = true
 text = "Hutcherson Whistle
 (HARD)"
 

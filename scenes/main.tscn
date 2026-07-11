@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhu03d3d4kjvm" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="AudioStream" uid="uid://b6yblav4i21xt" path="res://songs/90bpm simple loop by josefpres.wav" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://54gutxc4bsj3" path="res://icon.svg" id="2_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://c3d4ws2hygfwp" path="res://songs/Harmonica Josh Hutcherson Whistle (meme).mp3" id="3_jyhfs"]
 [ext_resource type="AudioStream" uid="uid://b48p4pv4haedq" path="res://sfx/positive-blip by cogfirestudios.wav" id="3_sugp2"]
 
@@ -11,11 +12,25 @@ size = Vector2(877.07043, 67.8569)
 [node name="Node2D" type="Node2D" unique_id=819954149]
 script = ExtResource("1_0wfyh")
 
-[node name="detector" type="Area2D" parent="." unique_id=598278568 groups=["detector"]]
+[node name="passDetector" type="Area2D" parent="." unique_id=598278568 groups=["passDetector"]]
 position = Vector2(0, 316)
 scale = Vector2(2.21875, 0.28000093)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detector" unique_id=1736043694 groups=["detector"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="passDetector" unique_id=1736043694 groups=["passDetector"]]
+position = Vector2(-6.0175507e-06, -19.643066)
+shape = SubResource("RectangleShape2D_o5qli")
+
+[node name="Icon" type="Sprite2D" parent="passDetector" unique_id=1388780529]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(1.5774686, -23.214222)
+scale = Vector2(6.8345065, 0.19531156)
+texture = ExtResource("2_tbgi4")
+
+[node name="failDetector" type="Area2D" parent="." unique_id=1832673085 groups=["failDetector"]]
+position = Vector2(0, 370)
+scale = Vector2(2.21875, 0.28000093)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="failDetector" unique_id=603056682 groups=["failDetector"]]
 position = Vector2(-6.0175507e-06, -19.643066)
 shape = SubResource("RectangleShape2D_o5qli")
 
@@ -34,6 +49,7 @@ offset_bottom = 473.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
+placeholder_text = "Type Answer Here!"
 
 [node name="songs" type="Node2D" parent="." unique_id=487145537]
 
@@ -44,6 +60,7 @@ stream = ExtResource("2_0wfyh")
 stream = ExtResource("3_jyhfs")
 
 [node name="gameplayText" type="Label" parent="." unique_id=325819411]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -54,6 +71,32 @@ offset_bottom = -88.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
 text = "text"
+horizontal_alignment = 1
+
+[node name="comboText" type="Label" parent="." unique_id=1760979073]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -389.5
+offset_top = -450.0
+offset_right = 389.5
+offset_bottom = -362.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "Combo:"
+horizontal_alignment = 1
+
+[node name="scoreText" type="Label" parent="." unique_id=806938125]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -389.5
+offset_top = -562.0
+offset_right = 389.5
+offset_bottom = -387.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "Score:"
 horizontal_alignment = 1
 
 [node name="correctAnswerSfx" type="AudioStreamPlayer2D" parent="." unique_id=2017909895]

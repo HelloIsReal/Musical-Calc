@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	Global.combo=0
+	Global.score=0
 
 # Tutorial song
 func _on_tutorial_button_pressed():
